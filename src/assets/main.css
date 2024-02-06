@@ -96,3 +96,8 @@
     transform: translateX(-32px);
     color: white
   }
+
+  input {
+    box-sizing: border-box;
+    border: 2px solid transparent; /* Reserve space for the border */
+  }
