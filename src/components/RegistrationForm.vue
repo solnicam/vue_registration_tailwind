@@ -18,7 +18,7 @@
                   </label>
                   <input v-model="form.email" @focus="isFocusedEmail = true" @blur="isFocusedEmail = false" type="email"
                     id="email" :class="[
-                      'w-full rounded-xl pt-6 pb-2 px-4 placeholder-gray2 border-transparent focus:outline-none focus:border-transparent focus:border-b-2 focus:border-b-indigo-500 hover:border-0.5 hover:border-gray-300',
+                      'w-full rounded-xl pt-6 pb-2 px-4 placeholder-gray2  focus:outline-none focus:border-transparent focus:border-b-2 focus:border-b-indigo-500 hover:border-0.5 hover:border-gray-300',
                       (form.email.length > 0 && !isFocusedEmail) ? 'bg-white shadow-lg' : 'bg-gray1',
                       v$.email.$error ? 'border-red-600 border-0.5' : ''
 
@@ -37,8 +37,8 @@
                     First Name
                   </label>
                   <input v-model="form.first_name" @focus="isFocusedFirstName = true" @blur="isFocusedFirstName = false"
-                    type="string" id="first_name" :class="[
-                      'w-full rounded-xl pt-6 pb-2 px-4 placeholder-gray2 border-transparent focus:outline-none focus:border-transparent focus:border-b-2 focus:border-b-indigo-500 hover:border-0.5 hover:border-gray-300',
+                    type="text" id="first_name" :class="[
+                      'w-full rounded-xl pt-6 pb-2 px-4 placeholder-gray2 focus:outline-none focus:border-transparent focus:border-b-2 focus:border-b-indigo-500 hover:border-0.5 hover:border-gray-300',
                       (form.first_name.length > 0 && !isFocusedFirstName) ? 'bg-white shadow-lg' : 'bg-gray1',
                       v$.first_name.$error ? 'border-red-600 border-0.5' : ''
                     ]" />
@@ -54,8 +54,8 @@
                     Second Name
                   </label>
                   <input v-model="form.second_name" @focus="isFocusedSecondName = true"
-                    @blur="isFocusedSecondName = false" type="string" id="second_name" :class="[
-                      'w-full rounded-xl pt-6 pb-2 px-4 placeholder-gray2 border-transparent focus:outline-none focus:border-transparent focus:border-b-2 focus:border-b-indigo-500 hover:border-0.5 hover:border-gray-300',
+                    @blur="isFocusedSecondName = false" type="text" id="second_name" :class="[
+                      'w-full rounded-xl pt-6 pb-2 px-4 placeholder-gray2 focus:outline-none focus:border-transparent focus:border-b-2 focus:border-b-indigo-500 hover:border-0.5 hover:border-gray-300',
                       (form.second_name.length > 0 && !isFocusedSecondName) ? 'bg-white shadow-lg' : 'bg-gray1',
                       v$.second_name.$error ? 'border-red-600 border-0.5' : ''
                     ]" />
@@ -71,7 +71,7 @@
                   ]" for="lang">Language</label>
                   <input readonly v-model="form.lang" @click="toggleDropdownLangs" @focus="isFocusedLang = true"
                     @blur="isFocusedLang = false" type="text" id="lang" :class="[
-                      'w-full rounded-xl pt-6 pb-2 px-4 pr-10 placeholder-gray-300 border-transparent focus:outline-none focus:border-transparent focus:border-b-2 hover:border-0.5 hover:border-gray-300 focus:bg-white focus:shadow-md focus:rounded-b-none',
+                      'w-full rounded-xl pt-6 pb-2 px-4 pr-10 placeholder-gray-300 focus:outline-none focus:border-transparent focus:border-b-2 hover:border-0.5 hover:border-gray-300 focus:bg-white focus:shadow-md focus:rounded-b-none',
                       form.lang.length > 0 ? 'bg-white shadow-lg' : 'bg-gray1',
                       'cursor-pointer',
                       v$.lang.$error ? 'border-red-600 border-0.5' : '',
@@ -106,7 +106,7 @@
 
                   <input readonly v-model="form.country" @click="toggleDropdownCountries" @focus="isFocusedCountry = true"
                     @blur="isFocusedCountry = false" type="text" id="country" :class="[
-                      'w-full rounded-xl pt-6 pb-2 px-4 pr-10 placeholder-gray-300 border-transparent focus:outline-none focus:border-transparent focus:border-b-2 hover:border-0.5 hover:border-gray-300  focus:bg-white focus:shadow-md focus:rounded-b-none',
+                      'w-full rounded-xl pt-6 pb-2 px-4 pr-10 placeholder-gray-300  focus:outline-none focus:border-transparent focus:border-b-2 hover:border-0.5 hover:border-gray-300  focus:bg-white focus:shadow-md focus:rounded-b-none',
                       form.country.length > 0 ? 'bg-white shadow-lg' : 'bg-gray1',
                       'cursor-pointer',
                       v$.country.$error ? 'border-red-600 border-0.5' : '',
@@ -137,7 +137,7 @@
                   </label>
                   <input v-model="form.password" :type="isPasswordVisible ? 'text' : 'password'"
                     @focus="isFocusedPassword = true" @blur="isFocusedPassword = false" id="password"
-                    :class="['w-full rounded-xl pt-6 pb-2 px-4 placeholder-gray-500 border-transparent focus:outline-none focus:border-transparent focus:border-b-2 focus:border-b-indigo-500 hover:border-0.5 hover:border-gray-300', (form.password.length > 0 && !isFocusedPassword) ? 'bg-white shadow-lg' : 'bg-gray-100', v$.password.$error ? 'border-red-600 border-0.5' : '']" />
+                    :class="['w-full rounded-xl pt-6 pb-2 px-4 placeholder-gray-500  focus:outline-none focus:border-transparent focus:border-b-2 focus:border-b-indigo-500 hover:border-0.5 hover:border-gray-300', (form.password.length > 0 && !isFocusedPassword) ? 'bg-white shadow-lg' : 'bg-gray-100', v$.password.$error ? 'border-red-600 border-0.5' : '']" />
                   <button type="button" @click="isPasswordVisible = !isPasswordVisible"
                     class="absolute inset-y-0 right-0 flex items-center pr-3">
                     <i :class="[isPasswordVisible ? 'fas fa-eye-slash' : 'fas fa-eye', v$.password.$error ? 'mb-5' : '']"
@@ -160,7 +160,7 @@
                   <input v-model="form.confirm_password" @focus="isFocusedConfirmPassword = true"
                     @blur="isFocusedConfirmPassword = false" :type="isConfirmPasswordVisible ? 'text' : 'password'"
                     id="confirm_password" :class="[
-                      'w-full rounded-xl pt-6 pb-2 px-4 placeholder-gray-500 border-transparent focus:outline-none focus:border-transparent focus:border-b-2 focus:border-b-indigo-500 hover:border-0.5 hover:border-gray-300',
+                      'w-full rounded-xl pt-6 pb-2 px-4 placeholder-gray-500 focus:outline-none focus:border-transparent focus:border-b-2 focus:border-b-indigo-500 hover:border-0.5 hover:border-gray-300',
                       (form.confirm_password.length > 0 && !isFocusedConfirmPassword) ? 'bg-white shadow-lg' : 'bg-gray-100',
                       v$.confirm_password.$error ? 'border-red-600 border-0.5' : ''
                     ]" />
@@ -180,7 +180,7 @@
                   <span class="text-gray-700 text-sm font-bold">Private profile</span>
                   <div class="switch-container">
                     <input type="checkbox" id="customSwitch" v-model="form.private" class="switch-checkbox"
-                      @change="toggleLabel" />
+                     />
                     <label for="customSwitch" class="switch-label">
                       <span class="switch-text" :class="{ 'text-active': form.private }">{{ form.private ? 'YES' : 'NO'
                       }}</span>
@@ -204,8 +204,8 @@
                     <input id="agreeTerms" type="checkbox" class="sr-only" v-model="form.terms"
                       :disabled="isDisabledTerms" />
                     <span class="relative">
-                      <span class="block w-6 h-6 bg-gray-100 rounded border border-transparent hover:border-gray-400"
-                      :class="{ 'bg-dark-blue': form.terms, 'border-gray-300': !form.terms || isDisabledTerms }"></span>
+                      <span 
+                      :class="form.terms ? 'bg-dark-blue' : 'bg-gray-100'" class="block w-6 h-6 rounded border border-transparent hover:border-gray-400"></span>
                       <svg class="w-4 h-4 text-white pointer-events-none absolute top-1 left-1" v-show="form.terms"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
