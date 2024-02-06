@@ -205,7 +205,7 @@
                       :disabled="isDisabledTerms" />
                     <span class="relative">
                       <span class="block w-6 h-6 bg-gray-100 rounded border border-transparent hover:border-gray-400"
-                        :class="{ 'bg-blue-700': form.terms, 'border-gray-300': !form.terms || isDisabledTerms }"></span>
+                      :class="{ 'bg-dark-blue': form.terms, 'border-gray-300': !form.terms || isDisabledTerms }"></span>
                       <svg class="w-4 h-4 text-white pointer-events-none absolute top-1 left-1" v-show="form.terms"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
